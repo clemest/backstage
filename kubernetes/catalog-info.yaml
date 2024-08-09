@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: talos-proxmox-cluster
+  description: "The Kubernetes cluster running on Talos and Proxmox"
+  annotations:
+    backstage.io/kubernetes-namespace: "default"  # Spécifie un namespace particulier
+    backstage.io/kubernetes-cluster: talos-proxmox-cluster
+    backstage.io/kubernetes-id: talos-proxmox-cluster
+spec:
+  type: service
+  lifecycle: production
+  owner: guest
