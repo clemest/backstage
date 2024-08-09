@@ -2,11 +2,13 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: guest
-  description: "Guest users and entities"
   namespace: default
+  description: "Guest users and entities"
 spec:
   type: team
   profile:
     displayName: Guest Users
-  members:
-    - user:default/username
+  children:  # La liste des enfants (par exemple, des utilisateurs ou des sous-groupes)
+    - user:default/username1
+    - user:default/username2
+    - group:default/subgroup1
